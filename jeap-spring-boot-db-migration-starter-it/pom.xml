@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>jeap-spring-boot-db-migration-starter-it</artifactId>
-    <name>jeap-spring-boot-db-migration-starter-it</name>
+    <name>${project.groupId}:${project.artifactId}</name>
     <description>Integration Tests for the jeap-spring-boot-db-migration-starter</description>
 
     <dependencies>
