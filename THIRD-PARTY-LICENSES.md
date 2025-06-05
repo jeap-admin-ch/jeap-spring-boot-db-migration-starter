@@ -8,7 +8,7 @@ Third-party dependencies grouped by their license type (see [pom.xml](/pom.xml) 
 Apache License Version 2.0
 -------------------------------
 
- * jeap-spring-boot-db-starter - [ch.admin.bit.jeap:jeap-spring-boot-db-migration-starter](https://github.com/jeap-admin-ch/jeap-spring-boot-db-migration-starter/tree/main/jeap-spring-boot-db-migration-starter)
+ * ch.admin.bit.jeap:jeap-spring-boot-db-migration-starter - [ch.admin.bit.jeap:jeap-spring-boot-db-migration-starter](https://github.com/jeap-admin-ch/jeap-spring-boot-db-migration-starter/tree/main/jeap-spring-boot-db-migration-starter)
  * ClassMate - [com.fasterxml:classmate](https://github.com/FasterXML/java-classmate)
  * Jackson-annotations - [com.fasterxml.jackson.core:jackson-annotations](https://github.com/FasterXML/jackson)
  * Jackson-core - [com.fasterxml.jackson.core:jackson-core](https://github.com/FasterXML/jackson-core)
