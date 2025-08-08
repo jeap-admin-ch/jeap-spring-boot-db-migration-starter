@@ -14,11 +14,20 @@ softwareType: library
 description:
   en:
     localisedName: jeap-spring-boot-db-migration-starter
-    shortDescription: TODO (Max. 150 characters)
+    shortDescription: jEAP Spring Boot DB Migration Starter is a Spring Boot starter for running DB migrations as separate jobs (i.e. on Kubernetes/OpenShift).
     longDescription: >
-      TODO (Min. 150 characters)
+      The jeap-spring-boot-db-migration-starter provides a standardized way to run
+      database migrations in jEAP-based applications during deployments on Kubernetes-based platforms.
+      It leverages Flyway for schema migration and supports running the migration as
+      a dedicated Kubernetes job (init container) or in traditional startup mode.
+      During deployments, the migration job runs before the application pod starts,
+      ensuring that the database schema is ready before the service goes live. For
+      local development, migrations can be executed directly during application
+      startup. The starter offers configuration options for migration mode, schema
+      location, and initialization behavior, allowing teams to adapt it to various
+      deployment environments while ensuring safe and consistent schema evolution.
     features:
-      - TODO
+      - Executes Flyway migrations as a Helm deployment job or during application startup
 legal:
   license: Apache-2.0
 maintenance:
