@@ -8,12 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.context.ApplicationContext;
-import org.springframework.test.context.DynamicPropertyRegistry;
-import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
-import org.testcontainers.containers.PostgreSQLContainer;
-import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 import static io.restassured.RestAssured.given;
@@ -25,14 +21,9 @@ import static org.mockito.Mockito.verify;
 
 @SpringBootTest(classes = TestConfig.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Testcontainers
-public class FlywayMigrationConfigurationIT {
+public class FlywayMigrationConfigurationIT extends PostgresTestContainerBase {
 
     private static final String MIGRATED_SCHEMA_VERSION = "1.0.0";
-
-    @Container
-    static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>(
-            "postgres:15-alpine"
-    );
 
     @MockitoBean
     private ShutdownService shutdownService;
@@ -42,23 +33,6 @@ public class FlywayMigrationConfigurationIT {
 
     @LocalServerPort
     private Integer port;
-
-    @BeforeAll
-    static void beforeAll() {
-        postgres.start();
-    }
-
-    @AfterAll
-    static void afterAll() {
-        postgres.stop();
-    }
-
-    @DynamicPropertySource
-    static void configureProperties(DynamicPropertyRegistry registry) {
-        registry.add("spring.datasource.url", postgres::getJdbcUrl);
-        registry.add("spring.datasource.username", postgres::getUsername);
-        registry.add("spring.datasource.password", postgres::getPassword);
-    }
 
     @Nested
     class GivenACleanDatabaseAndWebContext {
@@ -80,13 +54,13 @@ public class FlywayMigrationConfigurationIT {
 
             @Test
             @Order(1)
-            public void thenTheMigrationWasExecuted() {
+            void thenTheMigrationWasExecuted() {
                 assertEquals(MIGRATED_SCHEMA_VERSION, flyway.info().getInfoResult().schemaVersion);
             }
 
             @Test
             @Order(2)
-            public void thenTheServiceIsRunningAfterTheMigration() {
+            void thenTheServiceIsRunningAfterTheMigration() {
                 given()
                         .when()
                         .get("/actuator/info")
@@ -106,13 +80,13 @@ public class FlywayMigrationConfigurationIT {
 
                 @Test
                 @Order(1)
-                public void thenTheMigrationWasExecuted() {
+                void thenTheMigrationWasExecuted() {
                     assertEquals(MIGRATED_SCHEMA_VERSION, flyway.info().getInfoResult().schemaVersion);
                 }
 
                 @Test
                 @Order(2)
-                public void thenTheServiceIsRunningAfterTheMigration() {
+                void thenTheServiceIsRunningAfterTheMigration() {
                     given()
                             .when()
                             .get("/actuator/info")
@@ -132,13 +106,13 @@ public class FlywayMigrationConfigurationIT {
 
                     @Test
                     @Order(1)
-                    public void thenTheMigrationWasExecuted() {
+                    void thenTheMigrationWasExecuted() {
                         assertEquals(MIGRATED_SCHEMA_VERSION, flyway.info().getInfoResult().schemaVersion);
                     }
 
                     @Test
                     @Order(2)
-                    public void thenTheServiceIsShutDownAfterTheMigration() {
+                    void thenTheServiceIsShutDownAfterTheMigration() {
                         verify(shutdownService).shutdown(any(ApplicationContext.class), eq(0));
                     }
                 }
@@ -148,12 +122,12 @@ public class FlywayMigrationConfigurationIT {
                 class AndTheApplicationIsNotTheInitContainer {
 
                     @Test
-                    public void thenTheMigrationWasNotExecuted() {
+                    void thenTheMigrationWasNotExecuted() {
                         assertNull(flyway.info().getInfoResult().schemaVersion);
                     }
 
                     @Test
-                    public void thenTheServiceIsRunningAfterTheMigration() {
+                    void thenTheServiceIsRunningAfterTheMigration() {
                         given()
                                 .when()
                                 .get("/actuator/info")
@@ -165,3 +139,4 @@ public class FlywayMigrationConfigurationIT {
         }
     }
 }
+

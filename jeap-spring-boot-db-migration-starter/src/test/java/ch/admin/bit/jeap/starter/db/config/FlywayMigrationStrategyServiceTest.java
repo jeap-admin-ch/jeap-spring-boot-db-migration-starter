@@ -17,26 +17,29 @@ import org.springframework.context.ApplicationContext;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class FlywayMigrationStrategyServiceTest {
 
-    private static final int SHUTDOWN_STATUS_NORMAL = 0;
     private static final int SHUTDOWN_STATUS_ABNORMAL = 1;
 
     private static final String MIGRATION_STATE_PENDING = "PENDING";
     private static final String MIGRATION_STATE_SUCCEEDED = "SUCCEEDED";
     private static final String MIGRATION_STATE_FAILED = "FAILED";
 
-    ApplicationContext ctx = mock(ApplicationContext.class);
-    Flyway flyway = mock(Flyway.class);
-
     @Mock
-    ShutdownService shutdownService;
+    private ApplicationContext ctx;
+    @Mock
+    private Flyway flyway;
+    @Mock
+    private ShutdownService shutdownService;
 
     @InjectMocks
-    FlywayMigrationStrategyService cut;
+    FlywayMigrationStrategyService migrationStrategyService;
 
     private MigrationInfoService getMigrationInfoServiceMockWithSingletonMigrationState(String migrationState) {
         //The first migration is always the flyway migration table
@@ -67,7 +70,7 @@ class FlywayMigrationStrategyServiceTest {
 
             @BeforeEach
             void init() {
-                cut.executeStartupModeStrategy(flyway);
+                migrationStrategyService.executeStartupModeStrategy(flyway);
             }
 
             @Test
@@ -86,7 +89,7 @@ class FlywayMigrationStrategyServiceTest {
 
             @BeforeEach
             void init() {
-                cut.executeInitContainerStrategy(flyway);
+                migrationStrategyService.executeInitContainerStrategy(flyway);
             }
 
             @Test
@@ -106,7 +109,7 @@ class FlywayMigrationStrategyServiceTest {
                     MigrationInfoService infoService = getMigrationInfoServiceMockWithSingletonMigrationState(MIGRATION_STATE_SUCCEEDED);
                     when(flyway.info()).thenReturn(infoService);
 
-                    cut.executeApplicationContainerStrategy(ctx, flyway);
+                    migrationStrategyService.executeApplicationContainerStrategy(ctx, flyway);
                 }
 
                 @Test
@@ -123,7 +126,7 @@ class FlywayMigrationStrategyServiceTest {
                     MigrationInfoService infoService = getMigrationInfoServiceMockWithSingletonMigrationState(MIGRATION_STATE_FAILED);
                     when(flyway.info()).thenReturn(infoService);
 
-                    cut.executeApplicationContainerStrategy(ctx, flyway);
+                    migrationStrategyService.executeApplicationContainerStrategy(ctx, flyway);
                 }
 
                 @Test
@@ -140,7 +143,7 @@ class FlywayMigrationStrategyServiceTest {
                     MigrationInfoService infoService = getMigrationInfoServiceMockWithSingletonMigrationState(MIGRATION_STATE_PENDING);
                     when(flyway.info()).thenReturn(infoService);
 
-                    cut.executeApplicationContainerStrategy(ctx, flyway);
+                    migrationStrategyService.executeApplicationContainerStrategy(ctx, flyway);
                 }
 
                 @Test
