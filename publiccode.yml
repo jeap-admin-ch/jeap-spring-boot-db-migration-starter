@@ -1,7 +1,7 @@
 publiccodeYmlVersion: 0.4.0
 name: jeap-spring-boot-db-migration-starter
 applicationSuite: jEAP
-softwareVersion: 17.61.0
+softwareVersion: 17.61.1
 releaseDate: 2026-04-02
 url: "https://github.com/jeap-admin-ch/jeap-spring-boot-db-migration-starter.git"
 landingURL: "https://github.com/jeap-admin-ch/jeap"
