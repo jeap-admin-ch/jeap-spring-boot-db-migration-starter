@@ -6,7 +6,7 @@ import org.testcontainers.containers.PostgreSQLContainer;
 
 public class PostgresTestContainerBase {
 
-    private static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:16-alpine");
+    private static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:17-alpine");
 
     static {
         postgres.start();
