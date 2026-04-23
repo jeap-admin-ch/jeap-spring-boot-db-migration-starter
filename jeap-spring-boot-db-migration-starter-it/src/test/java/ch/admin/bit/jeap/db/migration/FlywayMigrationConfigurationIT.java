@@ -10,6 +10,7 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.springframework.test.context.bean.override.mockito.MockReset;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
 import static io.restassured.RestAssured.given;
@@ -25,7 +26,7 @@ public class FlywayMigrationConfigurationIT extends PostgresTestContainerBase {
 
     private static final String MIGRATED_SCHEMA_VERSION = "1.0.0";
 
-    @MockitoBean
+    @MockitoBean(reset = MockReset.NONE)
     private ShutdownService shutdownService;
 
     @Autowired

@@ -13,10 +13,6 @@ Apache License Version 2.0
  * Jackson-annotations - [com.fasterxml.jackson.core:jackson-annotations](https://github.com/FasterXML/jackson)
  * Jackson-core - [com.fasterxml.jackson.core:jackson-core](https://github.com/FasterXML/jackson-core)
  * jackson-databind - [com.fasterxml.jackson.core:jackson-databind](https://github.com/FasterXML/jackson)
- * Jackson-dataformat-TOML - [com.fasterxml.jackson.dataformat:jackson-dataformat-toml](https://github.com/FasterXML/jackson-dataformats-text)
- * Jackson datatype: jdk8 - [com.fasterxml.jackson.datatype:jackson-datatype-jdk8](https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jdk8)
- * Jackson datatype: JSR310 - [com.fasterxml.jackson.datatype:jackson-datatype-jsr310](https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310)
- * Jackson-module-parameter-names - [com.fasterxml.jackson.module:jackson-module-parameter-names](https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names)
  * docker-java-api - [com.github.docker-java:docker-java-api](https://github.com/docker-java/docker-java)
  * docker-java-transport - [com.github.docker-java:docker-java-transport](https://github.com/docker-java/docker-java)
  * docker-java-transport-zerodep - [com.github.docker-java:docker-java-transport-zerodep](https://github.com/docker-java/docker-java)
@@ -24,7 +20,8 @@ Apache License Version 2.0
  * JSON library from Android SDK - [com.vaadin.external.google:android-json](http://developer.android.com/sdk)
  * HikariCP - [com.zaxxer:HikariCP](https://github.com/brettwooldridge/HikariCP)
  * Apache Commons Codec - [commons-codec:commons-codec](https://commons.apache.org/proper/commons-codec/)
- * Apache Commons Logging - [commons-logging:commons-logging](http://commons.apache.org/proper/commons-logging/)
+ * Apache Commons IO - [commons-io:commons-io](https://commons.apache.org/proper/commons-io/)
+ * Apache Commons Logging - [commons-logging:commons-logging](https://commons.apache.org/proper/commons-logging/)
  * micrometer-commons - [io.micrometer:micrometer-commons](https://github.com/micrometer-metrics/micrometer)
  * micrometer-core - [io.micrometer:micrometer-core](https://github.com/micrometer-metrics/micrometer)
  * micrometer-jakarta9 - [io.micrometer:micrometer-jakarta9](https://github.com/micrometer-metrics/micrometer)
@@ -33,7 +30,6 @@ Apache License Version 2.0
  * REST Assured - [io.rest-assured:rest-assured](https://rest-assured.io/)
  * rest-assured-common - [io.rest-assured:rest-assured-common](https://rest-assured.io/)
  * xml-path - [io.rest-assured:xml-path](https://rest-assured.io/xml-path/)
- * Jandex: Core - [io.smallrye:jandex](https://smallrye.io)
  * Jakarta Dependency Injection - [jakarta.inject:jakarta.inject-api](https://github.com/eclipse-ee4j/injection-api)
  * Byte Buddy (without dependencies) - [net.bytebuddy:byte-buddy](https://bytebuddy.net/byte-buddy)
  * Byte Buddy agent - [net.bytebuddy:byte-buddy-agent](https://bytebuddy.net/byte-buddy-agent)
@@ -48,8 +44,8 @@ Apache License Version 2.0
  * Apache HttpClient - [org.apache.httpcomponents:httpclient](http://hc.apache.org/httpcomponents-client)
  * Apache HttpCore - [org.apache.httpcomponents:httpcore](http://hc.apache.org/httpcomponents-core-ga)
  * Apache HttpClient Mime - [org.apache.httpcomponents:httpmime](http://hc.apache.org/httpcomponents-client)
- * Apache Log4j API - [org.apache.logging.log4j:log4j-api](https://logging.apache.org/log4j/2.x/log4j/log4j-api/)
- * Log4j API to SLF4J Adapter - [org.apache.logging.log4j:log4j-to-slf4j](https://logging.apache.org/log4j/2.x/log4j/log4j-to-slf4j/)
+ * Apache Log4j API - [org.apache.logging.log4j:log4j-api](https://logging.apache.org/log4j/2.x/)
+ * Log4j API to SLF4J Adapter - [org.apache.logging.log4j:log4j-to-slf4j](https://logging.apache.org/log4j/2.x/)
  * tomcat-embed-core - [org.apache.tomcat.embed:tomcat-embed-core](https://tomcat.apache.org/)
  * tomcat-embed-el - [org.apache.tomcat.embed:tomcat-embed-el](https://tomcat.apache.org/)
  * tomcat-embed-websocket - [org.apache.tomcat.embed:tomcat-embed-websocket](https://tomcat.apache.org/)
@@ -59,9 +55,11 @@ Apache License Version 2.0
  * TagSoup - [org.ccil.cowan.tagsoup:tagsoup](http://home.ccil.org/~cowan/XML/tagsoup/)
  * flyway-core - [org.flywaydb:flyway-core](https://flywaydb.org/flyway-core)
  * flyway-database-postgresql - [org.flywaydb:flyway-database-postgresql](https://flywaydb.org/flyway-database-postgresql)
- * Hibernate Commons Annotations - [org.hibernate.common:hibernate-commons-annotations](http://hibernate.org)
+ * Hibernate Models - [org.hibernate.models:hibernate-models](https://github.com/hibernate/hibernate-models)
+ * Hibernate ORM - hibernate-core - [org.hibernate.orm:hibernate-core](https://hibernate.org/orm)
  * JBoss Logging 3 - [org.jboss.logging:jboss-logging](https://www.jboss.org)
  * JetBrains Java Annotations - [org.jetbrains:annotations](https://github.com/JetBrains/java-annotations)
+ * JSpecify annotations - [org.jspecify:jspecify](http://jspecify.org/)
  * Objenesis - [org.objenesis:objenesis](http://objenesis.org/objenesis)
  * org.opentest4j:opentest4j - [org.opentest4j:opentest4j](https://github.com/ota4j-team/opentest4j)
  * JSONassert - [org.skyscreamer:jsonassert](https://github.com/skyscreamer/JSONassert)
@@ -71,7 +69,6 @@ Apache License Version 2.0
  * Spring Context - [org.springframework:spring-context](https://github.com/spring-projects/spring-framework)
  * Spring Core - [org.springframework:spring-core](https://github.com/spring-projects/spring-framework)
  * Spring Expression Language (SpEL) - [org.springframework:spring-expression](https://github.com/spring-projects/spring-framework)
- * Spring Commons Logging Bridge - [org.springframework:spring-jcl](https://github.com/spring-projects/spring-framework)
  * Spring JDBC - [org.springframework:spring-jdbc](https://github.com/spring-projects/spring-framework)
  * Spring Object/Relational Mapping - [org.springframework:spring-orm](https://github.com/spring-projects/spring-framework)
  * Spring TestContext Framework - [org.springframework:spring-test](https://github.com/spring-projects/spring-framework)
@@ -82,21 +79,43 @@ Apache License Version 2.0
  * spring-boot-actuator - [org.springframework.boot:spring-boot-actuator](https://spring.io/projects/spring-boot)
  * spring-boot-actuator-autoconfigure - [org.springframework.boot:spring-boot-actuator-autoconfigure](https://spring.io/projects/spring-boot)
  * spring-boot-autoconfigure - [org.springframework.boot:spring-boot-autoconfigure](https://spring.io/projects/spring-boot)
+ * spring-boot-data-commons - [org.springframework.boot:spring-boot-data-commons](https://spring.io/projects/spring-boot)
+ * spring-boot-data-jpa - [org.springframework.boot:spring-boot-data-jpa](https://spring.io/projects/spring-boot)
+ * spring-boot-flyway - [org.springframework.boot:spring-boot-flyway](https://spring.io/projects/spring-boot)
+ * spring-boot-health - [org.springframework.boot:spring-boot-health](https://spring.io/projects/spring-boot)
+ * spring-boot-hibernate - [org.springframework.boot:spring-boot-hibernate](https://spring.io/projects/spring-boot)
+ * spring-boot-http-converter - [org.springframework.boot:spring-boot-http-converter](https://spring.io/projects/spring-boot)
+ * spring-boot-jackson - [org.springframework.boot:spring-boot-jackson](https://spring.io/projects/spring-boot)
+ * spring-boot-jdbc - [org.springframework.boot:spring-boot-jdbc](https://spring.io/projects/spring-boot)
+ * spring-boot-jpa - [org.springframework.boot:spring-boot-jpa](https://spring.io/projects/spring-boot)
+ * spring-boot-micrometer-metrics - [org.springframework.boot:spring-boot-micrometer-metrics](https://spring.io/projects/spring-boot)
+ * spring-boot-micrometer-observation - [org.springframework.boot:spring-boot-micrometer-observation](https://spring.io/projects/spring-boot)
+ * spring-boot-persistence - [org.springframework.boot:spring-boot-persistence](https://spring.io/projects/spring-boot)
+ * spring-boot-servlet - [org.springframework.boot:spring-boot-servlet](https://spring.io/projects/spring-boot)
+ * spring-boot-sql - [org.springframework.boot:spring-boot-sql](https://spring.io/projects/spring-boot)
  * spring-boot-starter - [org.springframework.boot:spring-boot-starter](https://spring.io/projects/spring-boot)
  * spring-boot-starter-actuator - [org.springframework.boot:spring-boot-starter-actuator](https://spring.io/projects/spring-boot)
  * spring-boot-starter-data-jpa - [org.springframework.boot:spring-boot-starter-data-jpa](https://spring.io/projects/spring-boot)
+ * spring-boot-starter-jackson - [org.springframework.boot:spring-boot-starter-jackson](https://spring.io/projects/spring-boot)
  * spring-boot-starter-jdbc - [org.springframework.boot:spring-boot-starter-jdbc](https://spring.io/projects/spring-boot)
- * spring-boot-starter-json - [org.springframework.boot:spring-boot-starter-json](https://spring.io/projects/spring-boot)
  * spring-boot-starter-logging - [org.springframework.boot:spring-boot-starter-logging](https://spring.io/projects/spring-boot)
+ * spring-boot-starter-micrometer-metrics - [org.springframework.boot:spring-boot-starter-micrometer-metrics](https://spring.io/projects/spring-boot)
  * spring-boot-starter-test - [org.springframework.boot:spring-boot-starter-test](https://spring.io/projects/spring-boot)
  * spring-boot-starter-tomcat - [org.springframework.boot:spring-boot-starter-tomcat](https://spring.io/projects/spring-boot)
+ * spring-boot-starter-tomcat-runtime - [org.springframework.boot:spring-boot-starter-tomcat-runtime](https://spring.io/projects/spring-boot)
  * spring-boot-starter-web - [org.springframework.boot:spring-boot-starter-web](https://spring.io/projects/spring-boot)
  * spring-boot-test - [org.springframework.boot:spring-boot-test](https://spring.io/projects/spring-boot)
  * spring-boot-test-autoconfigure - [org.springframework.boot:spring-boot-test-autoconfigure](https://spring.io/projects/spring-boot)
+ * spring-boot-tomcat - [org.springframework.boot:spring-boot-tomcat](https://spring.io/projects/spring-boot)
+ * spring-boot-transaction - [org.springframework.boot:spring-boot-transaction](https://spring.io/projects/spring-boot)
+ * spring-boot-web-server - [org.springframework.boot:spring-boot-web-server](https://spring.io/projects/spring-boot)
+ * spring-boot-webmvc - [org.springframework.boot:spring-boot-webmvc](https://spring.io/projects/spring-boot)
  * Spring Data Core - [org.springframework.data:spring-data-commons](https://spring.io/projects/spring-data)
  * Spring Data JPA - [org.springframework.data:spring-data-jpa](https://projects.spring.io/spring-data-jpa)
  * org.xmlunit:xmlunit-core - [org.xmlunit:xmlunit-core](https://www.xmlunit.org/)
  * SnakeYAML - [org.yaml:snakeyaml](https://bitbucket.org/snakeyaml/snakeyaml)
+ * Jackson-core - [tools.jackson.core:jackson-core](https://github.com/FasterXML/jackson-core)
+ * jackson-databind - [tools.jackson.core:jackson-databind](https://github.com/FasterXML/jackson)
 
 BSD 2-Clause License
 -------------------------------
@@ -109,7 +128,6 @@ BSD License 3
 
  * ANTLR 4 Runtime - [org.antlr:antlr4-runtime](https://www.antlr.org/antlr4-runtime/)
  * Hamcrest - [org.hamcrest:hamcrest](http://hamcrest.org/JavaHamcrest/)
- * Hamcrest Core - [org.hamcrest:hamcrest-core](http://hamcrest.org/JavaHamcrest/)
  * asm - [org.ow2.asm:asm](http://asm.ow2.io/)
 
 Eclipse Distribution License - v 1.0
@@ -117,7 +135,7 @@ Eclipse Distribution License - v 1.0
 
  * istack common utility code runtime - [com.sun.istack:istack-commons-runtime](https://projects.eclipse.org/projects/ee4j/istack-commons/istack-commons-runtime)
  * Jakarta Activation API - [jakarta.activation:jakarta.activation-api](https://github.com/jakartaee/jaf-api)
- * Jakarta Persistence API - [jakarta.persistence:jakarta.persistence-api](https://github.com/eclipse-ee4j/jpa-api)
+ * Jakarta Persistence API - [jakarta.persistence:jakarta.persistence-api](https://github.com/jakartaee/persistence)
  * Jakarta XML Binding API - [jakarta.xml.bind:jakarta.xml.bind-api](https://github.com/jakartaee/jaxb-api/jakarta.xml.bind-api)
  * Angus Activation Registries - [org.eclipse.angus:angus-activation](https://github.com/eclipse-ee4j/angus-activation/angus-activation)
  * JAXB Core - [org.glassfish.jaxb:jaxb-core](https://eclipse-ee4j.github.io/jaxb-ri/)
@@ -130,20 +148,15 @@ Eclipse Public License v2.0
  * Logback Classic Module - [ch.qos.logback:logback-classic](http://logback.qos.ch/logback-classic)
  * Logback Core Module - [ch.qos.logback:logback-core](http://logback.qos.ch/logback-core)
  * Jakarta Annotations API - [jakarta.annotation:jakarta.annotation-api](https://projects.eclipse.org/projects/ee4j.ca)
- * Jakarta Persistence API - [jakarta.persistence:jakarta.persistence-api](https://github.com/eclipse-ee4j/jpa-api)
+ * Jakarta Persistence API - [jakarta.persistence:jakarta.persistence-api](https://github.com/jakartaee/persistence)
  * jakarta.transaction API - [jakarta.transaction:jakarta.transaction-api](https://projects.eclipse.org/projects/ee4j.jta)
  * AspectJ Weaver - [org.aspectj:aspectjweaver](https://www.eclipse.org/aspectj/)
- * JUnit Jupiter (Aggregator) - [org.junit.jupiter:junit-jupiter](https://junit.org/junit5/)
- * JUnit Jupiter API - [org.junit.jupiter:junit-jupiter-api](https://junit.org/junit5/)
- * JUnit Jupiter Engine - [org.junit.jupiter:junit-jupiter-engine](https://junit.org/junit5/)
- * JUnit Jupiter Params - [org.junit.jupiter:junit-jupiter-params](https://junit.org/junit5/)
- * JUnit Platform Commons - [org.junit.platform:junit-platform-commons](https://junit.org/junit5/)
- * JUnit Platform Engine API - [org.junit.platform:junit-platform-engine](https://junit.org/junit5/)
-
-Eclipse Public License, Version 1.0
--------------------------------
-
- * JUnit - [junit:junit](http://junit.org)
+ * JUnit Jupiter (Aggregator) - [org.junit.jupiter:junit-jupiter](https://junit.org/)
+ * JUnit Jupiter API - [org.junit.jupiter:junit-jupiter-api](https://junit.org/)
+ * JUnit Jupiter Engine - [org.junit.jupiter:junit-jupiter-engine](https://junit.org/)
+ * JUnit Jupiter Params - [org.junit.jupiter:junit-jupiter-params](https://junit.org/)
+ * JUnit Platform Commons - [org.junit.platform:junit-platform-commons](https://junit.org/)
+ * JUnit Platform Engine API - [org.junit.platform:junit-platform-engine](https://junit.org/)
 
 GNU General Public License, version 2 (GPL2), with the classpath exception
 -------------------------------
@@ -156,11 +169,6 @@ GNU Lesser General Public License
 
  * Logback Classic Module - [ch.qos.logback:logback-classic](http://logback.qos.ch/logback-classic)
  * Logback Core Module - [ch.qos.logback:logback-core](http://logback.qos.ch/logback-core)
-
-GNU Library General Public License v2.1 or later
--------------------------------
-
- * Hibernate ORM - hibernate-core - [org.hibernate.orm:hibernate-core](https://hibernate.org/orm)
 
 LGPL-2.1-or-later
 -------------------------------
@@ -177,11 +185,11 @@ MIT License
  * Duct Tape - [org.rnorth.duct-tape:duct-tape](https://github.com/rnorth/duct-tape)
  * JUL to SLF4J bridge - [org.slf4j:jul-to-slf4j](http://www.slf4j.org)
  * SLF4J API Module - [org.slf4j:slf4j-api](http://www.slf4j.org)
- * Testcontainers :: Database-Commons - [org.testcontainers:database-commons](https://java.testcontainers.org)
- * Testcontainers :: JDBC - [org.testcontainers:jdbc](https://java.testcontainers.org)
- * Testcontainers :: JUnit Jupiter Extension - [org.testcontainers:junit-jupiter](https://java.testcontainers.org)
- * Testcontainers :: JDBC :: PostgreSQL - [org.testcontainers:postgresql](https://java.testcontainers.org)
  * Testcontainers Core - [org.testcontainers:testcontainers](https://java.testcontainers.org)
+ * Testcontainers :: Database-Commons - [org.testcontainers:testcontainers-database-commons](https://java.testcontainers.org)
+ * Testcontainers :: JDBC - [org.testcontainers:testcontainers-jdbc](https://java.testcontainers.org)
+ * Testcontainers :: JUnit Jupiter Extension - [org.testcontainers:testcontainers-junit-jupiter](https://java.testcontainers.org)
+ * Testcontainers :: JDBC :: PostgreSQL - [org.testcontainers:testcontainers-postgresql](https://java.testcontainers.org)
 
 Public Domain
 -------------------------------
