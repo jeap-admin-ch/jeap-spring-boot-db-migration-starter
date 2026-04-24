@@ -28,7 +28,7 @@
     <packaging>pom</packaging>
 
     <artifactId>jeap-spring-boot-db-migration-starter-parent</artifactId>
-    <version>18.1.0-alpha-springboot4-SNAPSHOT</version>
+    <version>18.2.0-alpha-springboot4-SNAPSHOT</version>
     <name>${project.groupId}:${project.artifactId}</name>
 
     <parent>
