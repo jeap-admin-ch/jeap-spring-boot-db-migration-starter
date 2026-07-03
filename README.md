@@ -24,16 +24,6 @@ Start with [Getting started](docs/getting-started.md), then follow the links bel
 | Configuration reference (`database-migration.*`)           | [docs/configuration.md](docs/configuration.md)             |
 | Kubernetes deployment & the migration job                  | [docs/kubernetes-deployment.md](docs/kubernetes-deployment.md) |
 
-## Modules
-
-Group id for all modules is `ch.admin.bit.jeap`; the version is managed by the jEAP Spring Boot parent.
-Consumers depend on `jeap-spring-boot-db-migration-starter`.
-
-| Module                                        | Purpose                                                                  |
-|-----------------------------------------------|--------------------------------------------------------------------------|
-| `jeap-spring-boot-db-migration-starter`       | The starter: Flyway auto-configuration and the platform migration strategy |
-| `jeap-spring-boot-db-migration-starter-it`    | Integration tests against a PostgreSQL Testcontainer                     |
-
 ## Changes
 
 This library is versioned using [Semantic Versioning](http://semver.org/) and all changes are documented in
