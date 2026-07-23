@@ -45,7 +45,7 @@ Apache License Version 2.0
  * Apache Groovy - [org.apache.groovy:groovy](https://groovy-lang.org)
  * Apache Groovy - [org.apache.groovy:groovy-json](https://groovy-lang.org)
  * Apache Groovy - [org.apache.groovy:groovy-xml](https://groovy-lang.org)
- * Apache HttpClient - [org.apache.httpcomponents:httpclient](http://hc.apache.org/httpcomponents-client)
+ * Apache HttpClient - [org.apache.httpcomponents:httpclient](http://hc.apache.org/httpcomponents-client-ga)
  * Apache HttpCore - [org.apache.httpcomponents:httpcore](http://hc.apache.org/httpcomponents-core-ga)
  * Apache HttpClient Mime - [org.apache.httpcomponents:httpmime](http://hc.apache.org/httpcomponents-client)
  * Apache Log4j API - [org.apache.logging.log4j:log4j-api](https://logging.apache.org/log4j/2.x/log4j/log4j-api/)
